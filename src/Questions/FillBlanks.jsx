@@ -3,7 +3,7 @@ import React, { useState, useEffect } from 'react';
 const FillBlanks = ({ initialQuestion }) => {
   const [question, setQuestion] = useState(initialQuestion);
   const [options, setOptions] = useState(['Option 1', 'Option 2', 'Option 3', 'Option 4']);
-  const [answer, setAnswer] = useState('');
+
   const [selectedWord, setSelectedWord] = useState('');
 
   useEffect(() => {
@@ -42,20 +42,15 @@ const FillBlanks = ({ initialQuestion }) => {
     document.addEventListener('keydown', handleKeyPress);
     return () => {
       document.removeEventListener('keydown', handleKeyPress);
-    };
+    }
   }, [question, options]);
 
-  const handleAnswerSubmit = () => {
-    console.log('User answered:', answer);
-  };
+
 
   const handleQuestionChange = (event) => {
     setQuestion(event.target.value);
   };
 
-  const handleAnswerChange = (event) => {
-    setAnswer(event.target.value);
-  };
 
   const handleOptionChange = (index, event) => {
     const updatedOptions = [...options];

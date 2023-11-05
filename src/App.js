@@ -1,14 +1,19 @@
 import './App.css';
-
 import PageRender from './PageRender';
 
+import { BrowserRouter as Router, Route, Routes } from 'react-router-dom'; // Import Router and Route
 
 function App() {
   return (
-  <div className='bg-blue-300'>
+    // <Router>
+    //   <div className="bg-blue-300">
+    //   <Routes>
+    //   <Route exact path="/" component={<PageRender/>} />
       <PageRender/>
-      
-  </div>
+       
+    //   {/* </Routes>
+    //   </div>
+    // </Router> */}
   );
 }
 
