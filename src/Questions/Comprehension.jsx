@@ -52,7 +52,7 @@ const Comprehension = ({ initialReferenceText, initialQuestions, initialOptions,
                 accept="image/*"
                 onChange={handleImageUpload}
                 className="p-4 mt-4"
-                disabled
+               
               />
               {selectedImage && (
                 <div>
@@ -73,7 +73,7 @@ const Comprehension = ({ initialReferenceText, initialQuestions, initialOptions,
               value={question.text}
               onChange={(event) => handleOptionChange(questionIndex, 'text', event)}
               className="w-full mb-2 border border-gray-300 rounded p-2"
-              disabled
+             
             />
             
             <div>
